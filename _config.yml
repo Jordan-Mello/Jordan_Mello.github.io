@@ -17,8 +17,8 @@ title: Jordan's Code Site
 email: jmello@uoguelph.ca
 description: >- # this means to ignore newlines until "baseurl:"
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://Jordan-Mello.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "http://Jordan-Mello.github.io" # the subpath of your site, e.g. /blog
+url: "http://Jordan-Mello.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Jordan-Mello
 # Build settings
 markdown: kramdown
