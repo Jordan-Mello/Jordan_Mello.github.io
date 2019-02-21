@@ -193,14 +193,46 @@ int fibbognocchi(int *digits, int *p1, int *p2)
     return 0;
 }
 ```
+I added a timing feature, to measure how long the program takes to run, as well as a percentage complete printout:
 
-Limitations:
-* UI is non-existant
-*
+```c
+#include <time.h> //defining cpu clock-time library
+    #if defined(HAVE_SYS_TIME_H) || defined(WOLF_C99)
+        #include <sys/time.h>
+    #endif
+    //...
+```
+```c
+clock_t start = clock();
+clock_t end;
+double time_elapsed_in_seconds;
+//...calculation code
+end = clock();
+//math for time taken to calculate
+time_elapsed_in_seconds = (end - start)/(double)CLOCKS_PER_SEC;
+printf("Seconds elapsed from start of program: %.2f", time_elapsed_in_seconds);
+```
+```c
+int fibNum = 250000; //fib(x)
+int fibDiv = fibNum / 100; //used for % printing
+//...
+if(k == divTemp) //gives % completion inside loop
+{
+    divTemp = fibDiv + divTemp;
+    count++;
+    printf("%d%%\n", count);
+}
+```
+Further notes/future plans:
+* Configuring code/variables for user input (custom lengths or fibNum) could prove useful
+* Optimizing code as a means for observing efficiency
+* Self-generating executable
+* Writing to output (i.e. writes 100,000 Fibonacci numbers to a text file)
+
+[2000 Fibonacci values.][fib2000]
 
 
-Further notes:
-
+[fib2000]: /files/fib(2000).txt
 [rec vs it]: https://stackoverflow.com/questions/2651112/is-recursion-ever-faster-than-looping
 [E25]: https://projecteuler.net/problem=25
 [elink]: https://projecteuler.net/about
