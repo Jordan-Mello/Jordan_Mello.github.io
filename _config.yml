@@ -22,7 +22,7 @@ url: "http://jordan-mello.github.io" # the base hostname & protocol for your sit
 github_username:  Jordan-Mello
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
