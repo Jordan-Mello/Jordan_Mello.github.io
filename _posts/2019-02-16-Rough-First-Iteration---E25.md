@@ -231,9 +231,7 @@ Further notes/future plans:
 
 [2000 Fibonacci values.][fib2000]
 
-[Fib(1,000,002)][fib1m]
 
-[fib1m]: /files/1m.txt
 [fib2000]: /files/fib(2000).txt
 [rec vs it]: https://stackoverflow.com/questions/2651112/is-recursion-ever-faster-than-looping
 [E25]: https://projecteuler.net/problem=25
